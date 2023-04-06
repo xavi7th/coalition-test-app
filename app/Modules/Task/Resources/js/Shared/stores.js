@@ -14,14 +14,14 @@ isDarkMode.subscribe(value => {
   dark_mode_enabled = value;
 });
 
-if ((prefersDarkScheme.matches && NULL === localStorage.getItem('darkMideEnabled')) || dark_mode_enabled) {
+if ((prefersDarkScheme.matches && null === localStorage.getItem('darkMideEnabled')) || dark_mode_enabled) {
   console.log('---==== Activating dark mode per preferences ====---');
 
   body.classList.add('rui-nightmode');
-  isDarkMode.update(n => TRUE);
+  isDarkMode.update(n => true);
 } else {
   body.classList.remove('rui-nightmode');
-  isDarkMode.update(n => FALSE);
+  isDarkMode.update(n => false);
 }
 
 export const updateDarkMode = () => {

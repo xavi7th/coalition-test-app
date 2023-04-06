@@ -11,7 +11,7 @@ let modules = fs.readdirSync('./app/Modules');
 
 if (modules && modules.length > 0) {
   modules.forEach((module) => {
-    let path = `./app / Modules / ${module} / webpack.mix.js`;
+    let path = `./app/Modules/${module}/webpack.mix.js`;
     if (fs.existsSync(path)) {
       require(path);
     }
@@ -52,7 +52,7 @@ mix.webpackConfig({
   },
   plugins: [
     new CleanWebpackPlugin({
-      dry: FALSE,
+      dry: false,
       cleanOnceBeforeBuildPatterns: [
         "assets/js/*.js",
         "assets/css/*.css",
@@ -69,11 +69,11 @@ mix.webpackConfig({
     use: {
       loader: "svelte-loader",
       options: {
-        emitCss: TRUE, // mix.inProduction(),
+        emitCss: true, // mix.inProduction(),
         compilerOptions: {
           // css: false,
           dev: !mix.inProduction(),
-          enableSourcemap: TRUE,
+          enableSourcemap: true,
           },
         onwarn: (warning, handler) => {
           const { code, frame } = warning;
@@ -119,16 +119,16 @@ mix
       require("postcss-fixes")(),
       require("cssnano")({
         discardComments: {
-          removeAll: TRUE,
+          removeAll: true,
         },
-        calc: FALSE,
-        cssDeclarationSorter: TRUE,
+        calc: false,
+        cssDeclarationSorter: true,
       }),
     ],
   })
   .extract()
   .purgeCss({
-    enabled: TRUE,
+    enabled: true,
     extend: {
       content: [
         path.join(__dirname, "app/Modules/**/*.php"),
@@ -224,7 +224,7 @@ mix
       }
     });
 
-    let data = JSON.stringify(newManifestData, NULL, 2);
+    let data = JSON.stringify(newManifestData, null, 2);
     fs.writeFileSync("./public/mix-manifest.json", data);
   });
 

@@ -18,11 +18,16 @@
 /**
  * //ADDED GENERAL CUSTOM STYLES
  */
+
+ .main-content{
+  min-height: calc(100vh - 70px);
+ }
+
  .menu-area{
 
    .btn-login{
     font-size: 12px;
-    background-image: linear-gradient(220deg,#f27c1e,#dd4c23 79%);
+    background-image: linear-gradient(220deg,#1eb2f2,#2371dd 79%);
     border-radius: 3px;
     color: #fff !important;
     font-weight: 300;
@@ -31,7 +36,7 @@
     padding: 10px 35px;
 
     &:hover{
-      background-image: linear-gradient(180deg, #dd4c23 15%, #f27c1e 79%);
+      background-image: linear-gradient(180deg, #2371dd 15%, #1eb2f2 79%);
       color: #ffffff;
     }
   }
@@ -181,60 +186,19 @@
   }
 }
 
-.rs-rain-animate {
-  .line-inner{
-    &.orange-dark {
-      .line{
-        &:after{
-          background-image: linear-gradient(220deg,transparent, #f3b07a 50%,#dd4c23 79%);
-        }
-      }
-    }
-  }
-}
 
 ul.rs-features-list.listing-style{
 
   li{
     i{
       background-color: transparent;
-      background-image: linear-gradient(180deg,#dd4c23,#f27c1e);
+      background-image: linear-gradient(180deg,#2371dd,#1eb2f2);
       border-radius: 50px 50px 50px 50px;
       color: #fff;
       margin: 0 20px 0 0;
       padding: 1px;
       font-size: 18px;
       line-height: 15px;
-    }
-  }
-}
-
-.accordion{
-
-  .accordion-button{
-    padding: 1.5rem 1.25rem;
-
-    &.black-dark:after{
-      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%236c757d'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
-    }
-
-    &:not(.collapsed) {
-      background-color: #ffefe7;
-      color: #231e1c;
-
-      &:after{
-        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23f27c1e'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
-      }
-    }
-
-    &:focus{
-      border-color: #feb386;
-      box-shadow: 0 0 0 .25rem rgb(253 126 13 / 25%);
-    }
-
-    &.black-dark:focus{
-      border-color: #6c757d!important;
-      box-shadow: none;
     }
   }
 }
@@ -303,60 +267,4 @@ ul.rs-features-list.listing-style{
       }
     }
   }
-}
-
-.btn{
-
-  &.order-package{
-    transition: .3s;
-    cursor: pointer;
-    position: relative;
-    display: inline-block;
-
-    color: #f14d1a;
-    font-weight: 500;
-    padding: 4px 14px;
-    margin-left: 150px;
-    background: white;
-    text-transform: uppercase;
-    border: solid #f14d1a;
-    border-width: 2px;
-    border-radius: 30px 30px 30px 30px;
-
-    &:hover{
-      font-weight: 900;
-      padding: 5px 14px;
-      border-width: 1px;
-      border-radius: 5px 5px 5px 5px;
-    }
-  }
-}
-
-.course-summary{
-  .title{
-    font-size: 18px;
-  }
-
-  .banner-btn{
-    position: relative;
-
-    .order-video{
-      padding: 15px 125px;
-      text-transform: uppercase;
-      box-shadow: 1px 2px 4px 0 #6f6c6a;
-      line-height: 1;
-    }
-
-    .popup-videos{
-      bottom: -12px;
-      background-image: linear-gradient(220deg,#f27c1e,#dd4c23 79%)
-    }
-  }
-
-}
-
-.text-trunc{
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap!important;
 }

@@ -32,7 +32,7 @@ class ProjectController extends Controller
       $sanitized_data  = $this->sanitizeData($request->all());
       $project = Project::create($this->validateData($sanitized_data));
 
-      return redirect()->route('projects.index')->withFlash(['success' => $project->name . ' project created. Tasks can now be created under it.']);
+      return redirect()->route('app.projects.index')->withFlash(['success' => $project->name . ' project created. Tasks can now be created under it.']);
     } catch (Throwable $e) {
       logger($e);
       if (! app()->environment('production')) return back()->withFlash(['error' => $e->getMessage()]);
@@ -46,7 +46,7 @@ class ProjectController extends Controller
       $sanitized_data  = $this->sanitizeData($request->all());
       $project->update($this->validateData($sanitized_data));
 
-      return redirect()->route('projects.index')->withFlash(['success' => $project->name . ' project updated']);
+      return redirect()->route('app.projects.index')->withFlash(['success' => $project->name . ' project updated']);
     } catch (Throwable $e) {
       logger($e);
       if (app()->environment() == 'local') return back()->withFlash(['error' => $e->getMessage()]);

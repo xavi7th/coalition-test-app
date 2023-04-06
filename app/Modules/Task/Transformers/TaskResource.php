@@ -17,9 +17,12 @@ class TaskResource extends JsonResource
     return [
       'id' => $this->id,
       'name' => $this->name,
-      'course_category_id' => $this->course_category_id,
+      'priority' => $this->priority,
+      'is_completed' => $this->is_completed,
+      'created_at' => $this->created_at->toDateTimeString(),
 
-      'course_category' => $this->when($this->relationLoaded('course_category') && $this->course_category, fn() => $this->course_category->name),
+      'project_id' => $this->project_id,
+      'project' => $this->when($this->relationLoaded('project') && $this->project, fn() => $this->project->name),
     ];
   }
 }

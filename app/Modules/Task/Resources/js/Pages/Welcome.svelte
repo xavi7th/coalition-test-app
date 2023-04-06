@@ -12,7 +12,7 @@
   ::before {
     --tw-content: "";
   }
-  :global(html){
+  :global(html) {
     line-height: 1.5;
     -webkit-text-size-adjust: 100%;
     -moz-tab-size: 4;
@@ -20,17 +20,15 @@
     font-family: Figtree, sans-serif;
     font-feature-settings: normal;
   }
-  :global(body){
+  :global(body) {
     margin: 0;
     line-height: inherit;
   }
-
   hr {
     height: 0;
     color: inherit;
     border-top-width: 1px;
   }
-
   abbr:where([title]) {
     -webkit-text-decoration: underline dotted;
     text-decoration: underline dotted;
@@ -348,6 +346,9 @@
   .mt-16 {
     margin-top: 4rem;
   }
+  .mt-6 {
+    margin-top: 1.5rem;
+  }
   .mt-4 {
     margin-top: 1rem;
   }
@@ -435,7 +436,7 @@
     --tw-bg-opacity: 1;
     background-color: rgb(243 244 246 / var(--tw-bg-opacity));
   }
-  .bg-white {
+  .bg-whit {
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   }
@@ -464,8 +465,8 @@
   .stroke-gray-400 {
     stroke: #9ca3af;
   }
-  .p-6 {
-    padding: 1.5rem;
+  .md-sz {
+    padding: 1.5rem !important;
   }
   .px-6 {
     padding-left: 1.5rem;
@@ -668,14 +669,10 @@
       padding: 2rem;
     }
   }
-
-  .logo svg{
-    max-width: 300px;
-  }
 </style>
 
 <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
-  <div class="max-w-7xl mx-auto p-6 lg:p-8">
+  <div class="max-w-7xl mx-auto md-sz lg:p-8">
     <div class="flex justify-center logo">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 532.12 131.07">
 			  <g id="Layer_1" data-name="Layer 1">
@@ -695,7 +692,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
         <a
           href="{ route('app.projects.index') }"
-          class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500"
+          class="scale-100 md-sz bg-whit dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500"
         >
           <div>
             <h2 class="text-xl font-semibold text-gray-900 dark:text-white">Manage Projects</h2>
@@ -708,7 +705,7 @@
 
         <a
           href="{ route('app.tasks.index') }"
-          class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500"
+          class="scale-100 md-sz bg-whit dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500"
         >
           <div>
             <h2 class="text-xl font-semibold text-gray-900 dark:text-white">Manage Tasks</h2>

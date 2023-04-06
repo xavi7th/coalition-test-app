@@ -29,6 +29,7 @@
   <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/img/fav.png')}}">
 
   <script src="{{ mix('assets/js/inertiajs-app-vendor.js') }}"></script>
+  <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Scripts -->

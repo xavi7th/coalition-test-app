@@ -18,7 +18,7 @@ class TaskController extends Controller
   public function index()
   {
     return Inertia::render('Task::ManageTasks', [
-      'tasks' => fn() => TaskResource::collection(Task::with('project') ->get()),
+      'tasks' => fn() => TaskResource::collection(Task::pending()->with('project')->orderBy('priority') ->get()),
       'projects' => fn() => ProjectResource::collection(Project::all()),
     ])->withViewData([
       'title' => 'Manage Tasks',
@@ -35,7 +35,7 @@ class TaskController extends Controller
       $sanitized_data  = $this->sanitizeData($request->all());
       $task = Task::create($this->validateData($sanitized_data));
 
-      return redirect()->route('tasks.index')->withFlash(['success' => $task->name . ' task created']);
+      return redirect()->route('app.tasks.index')->withFlash(['success' => $task->name . ' task created']);
     } catch (Throwable $e) {
       logger($e);
       if (! app()->environment('production')) return back()->withFlash(['error' => $e->getMessage()]);
@@ -49,7 +49,7 @@ class TaskController extends Controller
       $sanitized_data  = $this->sanitizeData($request->all());
       $task->update($this->validateData($sanitized_data));
 
-      return redirect()->route('tasks.index')->withFlash(['success' => $task->name . ' task updated']);
+      return redirect()->route('app.tasks.index')->withFlash(['success' => $task->name . ' task updated']);
     } catch (Throwable $e) {
       logger($e);
       if (app()->environment() == 'local') return back()->withFlash(['error' => $e->getMessage()]);
@@ -63,7 +63,24 @@ class TaskController extends Controller
       $task->completed_at = now();
       $task->save();
 
-      return redirect()->route('tasks.index')->withFlash(['success' => $task->name . ' task completed']);
+      return redirect()->route('app.tasks.index')->withFlash(['success' => $task->name . ' task completed']);
+    } catch (Throwable $e) {
+      logger($e);
+      if (app()->environment() == 'local') return back()->withFlash(['error' => $e->getMessage()]);
+    }
+    return back()->withFlash(['error' => 'Error occurred']);
+  }
+
+  public function priorities(Request $request)
+  {
+    if (!$request->values) abort(back()->withFlash(['error' => 'Invalid data']));
+
+    try {
+      collect($request->values)->each(function ($id, $priority) {
+        Task::where('id', $id)->update(['priority' => ($priority + 1)]);
+      });
+
+      return redirect()->route('app.tasks.index')->withFlash(['success' => 'Task priorities updated!']);
     } catch (Throwable $e) {
       logger($e);
       if (app()->environment() == 'local') return back()->withFlash(['error' => $e->getMessage()]);
@@ -82,6 +99,7 @@ class TaskController extends Controller
   {
     $filters = [
       'name' => 'trim|escape|capitalize',
+      'priority' => 'digit',
     ];
     return (new Sanitizer($data, $filters))->sanitize();
   }
@@ -90,6 +108,7 @@ class TaskController extends Controller
   {
     return Validator::make($data, [
       'name' => 'required|string|max:70',
+      'priority' => 'required|numeric',
       'project_id' => 'required|exists:projects,id',
     ])->validate();
   }

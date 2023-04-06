@@ -16,7 +16,7 @@
   import LoadingButton from "@task-components/LoadingButton.svelte";
   import DataSearchComponent from '@task-components/DataSearchComponent.svelte';
 
-  export let course_categories = [];
+  export let projects = [];
 
   $: ({ errors } = $page.props);
 
@@ -25,11 +25,10 @@
       pageModals.teleport_to($modalRoot)
     } catch (e) {};
 
-    filteredRecords = course_categories;
+    filteredRecords = projects;
 
-    pageTitle.update(title => 'Manage Course Categories');
+    pageTitle.update(title => 'Manage Projects');
   }
-
 
   let details = {}, pageModals, filteredRecords = [], action, isLoading = false,
 
@@ -40,65 +39,91 @@
       details._method = 'PUT';
     }
 
-    let url = action == 'create' ? route("coursecategories.store") : route("coursecategories.update", details.id)
+    let url = action == 'create' ? route("app.projects.store") : route("app.projects.update", details.id)
 
     Inertia.post(url, details, {
         preserveState: true,
         preserveScroll: true,
-        only: ["flash", "errors", 'course_categories'],
+        only: ["flash", "errors", 'projects'],
         onSuccess: () =>{
           details = {};
-          jQuery('#createCategoryModal').modal('hide');
+          jQuery('#createProjectModal').modal('hide');
         },
         onFinish: () => isLoading = false
     })
   }
 
   onMount(() => {
-    jQuery('#createCategoryModal').on('hidden.bs.modal', function (e) {
+    jQuery('#createProjectModal').on('hidden.bs.modal', function (e) {
       details = {};
     })
   })
 </script>
 
-<div id="rs-services" class="rs-services style9 bg26 pt-120 pb-95 md-pt-80 md-pb-75">
+
+<style lang="scss">
+  .addon-services{
+    margin: 0 !important;
+    padding: 20px !important;
+    position: relative;
+
+    .btn-edit{
+      bottom: 20px;
+      position: absolute;
+      right: 20px;
+      z-index: 10;
+
+      li{
+        display: inline-block;
+      }
+
+      a{
+        background: #000;
+        border-radius: 8px 8px 8px 8px;
+        color: #fff;
+        display: block;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 5px 15px;
+        transition: .4s;
+      }
+    }
+  }
+
+</style>
+
+<div id="rs-services" class="rs-services style9 pt-120 pb-95 md-pt-80 md-pb-75">
   <div class="container">
     <div class="services-top-section">
 
       <div class="sec-title6 text-center mb-40">
         <h2 class="title pb-14">
-          <span>Programmes</span> List
+          <span>Projects</span> List
         </h2>
         <div class="title-img">
-          <img src="/assets/img/shape.png" alt="Images">
+          <!-- <img src="/assets/img/shap.png" alt="Images"> -->
         </div>
       </div>
 
-      <DataSearchComponent searchData={course_categories} searchProperty="name" on:results={e => filteredRecords = e.detail} />
+      <DataSearchComponent searchData={projects} searchProperty="name" on:results={e => filteredRecords = e.detail} />
       <div class="row vertical-gap mb-100">
         <div class="col d-flex justify-content-center">
-          <button type="button" class="readon started get-ready5 text-center text-nowrap" data-bs-toggle="modal" data-bs-target="#createCategoryModal" on:click="{ () => action = 'create' }"> Create New Programme</button>
+          <button type="button" class="btn readon started get-ready5 text-center text-nowrap" data-bs-toggle="modal" data-bs-target="#createProjectModal" on:click="{ () => action = 'create' }"> Create New Project</button>
         </div>
       </div>
 
       <div class="row">
 
-        {#each filteredRecords as category (category.id)}
+        {#each filteredRecords as project (project.id)}
           <div class="col-lg-4 col-md-6" animate:flip="{{duration:d => 30 * Math.sqrt(d)}}" in:fly={{x:100}} out:fly={{x:-100}}>
             <div class="services-item">
-              <div class="image-part">
-                <img src="{category.poster_thumb_url || '/assets/img/services/style11/1.jpg'}" alt="Services">
-                <ul class="btn-edit">
-                  <li><a data-bs-toggle="modal" href="#createCategoryModal" on:click="{ () => { action = 'update'; details = category } }" class="btn-xs">Edit Category</a></li>
-                </ul>
-              </div>
               <div class="addon-services">
-                <div class="services-icon">
-                  <img src="{category.icon_url || '/assets/img/services/style11/icons/1.png'}" alt="Icons">
-                </div>
                 <div class="services-text">
-                  <h2 class="title text-capitalize"> <a href="#/">{category.name}</a></h2>
+                  <h2 class="title text-capitalize"> <a href="#/">{project.name}</a></h2>
                 </div>
+                <ul class="btn-edit">
+                  <li><a data-bs-toggle="modal" href="#createProjectModal" on:click="{ () => { action = 'update'; details = project } }">Edit Project</a></li>
+                </ul>
               </div>
             </div>
           </div>
@@ -110,17 +135,17 @@
 </div>
 
 <Portal bind:this={pageModals}>
-  <Modal modalId="createCategoryModal" modalTitle="{action} Programme" lg>
-    <form class="rs-my-account" on:submit|preventDefault|stopPropagation={processDetails} id="createCategoryForm">
+  <Modal modalId="createProjectModal" modalTitle="{action} Project" lg>
+    <form class="rs-my-account" on:submit|preventDefault|stopPropagation={processDetails} id="createProjectForm">
 
       <div class="row rs-login">
-        <TextInput required grid="col-12 mb-30" label="Programme Name" name="category-name" type="text" placeholder="Programme Name" errors="{errors.name}" bind:val="{details.name}" />
+        <TextInput required grid="col-12 mb-30" label="Project Name" name="project-name" type="text" placeholder="Project Name" errors="{errors.name}" bind:val="{details.name}" />
       </div>
 
     </form>
 
-    <LoadingButton type="submit" form="createCategoryForm" slot="footer-button1" loading={isLoading} className="{action === 'update' ? 'btn-warning' : 'btn-success'} btn-long" icon='check-circle' shouldDisable={!details.name }>
-      { action === 'update' ? 'Update' : 'Create' } Programme
+    <LoadingButton type="submit" form="createProjectForm" slot="footer-button1" loading={isLoading} className="{action === 'update' ? 'btn-warning' : 'btn-success'} btn-long" icon='check-circle' shouldDisable={!details.name }>
+      { action === 'update' ? 'Update' : 'Create' } Project
     </LoadingButton>
   </Modal>
 </Portal>

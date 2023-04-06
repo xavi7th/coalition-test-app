@@ -38,6 +38,12 @@
   <meta name="description" content="{ $pageTitle }" />
 </svelte:head>
 
+<style>
+  #rs-header{
+    padding: 20px 0;
+  }
+</style>
+
 <!-- The blur filter on menu open -->
 <div class="offwrap"></div>
 

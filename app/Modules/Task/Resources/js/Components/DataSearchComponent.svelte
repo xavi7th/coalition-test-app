@@ -54,8 +54,8 @@
       padding: 0 20px;
 
       input{
-        background: #fff0e8;
-        border: 1px solid #f7c4a6;
+        background: #e8f0ff;
+        border: 1px solid #a6d4f7;
         border-radius: 30px 0 0 30px;
         box-shadow: inset 1px -2px 15px -6px #ccc;
         color: #0a0a0a;
@@ -70,7 +70,7 @@
         position: relative;
 
         button{
-          background-image: linear-gradient(180deg,#dd4c23 19%,#f27c1e);
+          background-image: linear-gradient(180deg,#2371dd 19%,#1eb2f2);
           border: none;
           border-radius: 50%;
           bottom: 1px;

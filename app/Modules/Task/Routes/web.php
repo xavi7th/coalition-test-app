@@ -13,13 +13,14 @@ Route::name('app.')->group(function () {
     Route::post('create', [TaskController::class, 'store'])->name('store');
     Route::put('{task}/edit', [TaskController::class, 'update'])->name('update');
     Route::patch('{task}/complete', [TaskController::class, 'complete'])->name('complete');
+    Route::post('priorities', [TaskController::class, 'priorities'])->name('priorities');
     Route::delete('{task}/delete', [TaskController::class, 'delete'])->name('delete');
   });
 
   Route::name('projects.')->prefix('projects')->group(function () {
     Route::get('', [ProjectController::class, 'index'])->name('index');
     Route::post('create', [ProjectController::class, 'store'])->name('store');
-    Route::put('{category}/edit', [ProjectController::class, 'update'])->name('update');
-    Route::delete('{category}/delete', [ProjectController::class, 'delete'])->name('delete');
+    Route::put('{project}/edit', [ProjectController::class, 'update'])->name('update');
+    Route::delete('{project}/delete', [ProjectController::class, 'delete'])->name('delete');
   });
 });

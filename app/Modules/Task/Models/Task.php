@@ -32,14 +32,19 @@ class Task extends BaseModel
     return Str::slug($this->name);
   }
 
-  public function getIsCompletedAttribute()
+  public function getIsCompletedAttribute(): bool
   {
-    return $this->completed_at === NULL;
+    return ! is_null($this->completed_at);
   }
 
-  public function scopeForSlug(Builder $q, $slug)
+  public function scopePending(Builder $q)
   {
-    $q->where('name', Str::of($slug)->title()->replace('-', ' '));
+    $q->whereNull('completed_at');
+  }
+
+  public function scopeCompleted(Builder $q)
+  {
+    $q->whereNotNull('completed_at');
   }
 
   protected static function newFactory()

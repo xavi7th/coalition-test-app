@@ -13,10 +13,10 @@ InertiaProgress.init({
   color: '#29d',
 
   // Whether to include the default NProgress styles.
-  includeCSS: TRUE,
+  includeCSS: true,
 
   // Whether the NProgress spinner will be shown.
-  showSpinner: TRUE,
+  showSpinner: true,
 })
 
 
@@ -30,7 +30,7 @@ let clearInt = setInterval(() => {
     createInertiaApp({
       resolve: name => {
 
-        let [module, component] = name.includes('::') ? _.split(name, '::') : [NULL, name];
+        let [module, component] = name.includes('::') ? _.split(name, '::') : [null, name];
 
           return import(
             /*
@@ -39,7 +39,7 @@ let clearInt = setInterval(() => {
               webpackPrefetch: true,
               webpackPreload: true
             */
-              `.. / .. / .. / ${module} / Resources / js / Pages / ${component}.svelte`
+              `../../../${module}/Resources/js/Pages/${component}.svelte`
           )
       },
       setup({ el, App, props }) {
@@ -50,7 +50,7 @@ let clearInt = setInterval(() => {
             icon: "error",
             timer:10000, //milliseconds
             footer:
-              `Our support email: & nbsp; & nbsp; & nbsp; < a target = "_blank" rel = "noopener noreferrer" href = "mailto:${process.env.MIX_APP_EMAIL}" > ${process.env.MIX_APP_EMAIL} < / a > `,
+              `Our support email: & nbsp; & nbsp; & nbsp; <a target = "_blank" rel = "noopener noreferrer" href = "mailto:${process.env.MIX_APP_EMAIL}" > ${process.env.MIX_APP_EMAIL} </a>`,
           });
         } else if (props.initialPage.props.flash.warning) {
           ToastLarge.fire({
@@ -58,7 +58,7 @@ let clearInt = setInterval(() => {
             html: props.initialPage.props.flash.warning,
             icon: "warning",
             timer: 15000,
-            allowEscapeKey: TRUE
+            allowEscapeKey: true
           });
         } else if (props.initialPage.props.flash.success) {
           ToastLarge.fire({
@@ -66,7 +66,7 @@ let clearInt = setInterval(() => {
             html: props.initialPage.props.flash.success,
             icon: "success",
             timer: 3000,
-            allowEscapeKey: TRUE
+            allowEscapeKey: true
           });
         }
         new App({ target: el, props })

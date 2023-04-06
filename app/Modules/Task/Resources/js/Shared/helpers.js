@@ -25,11 +25,11 @@ export const mediaHandler = () => {
 
     if (window.matchMedia('(max-width: 991px)')
         .matches) {
-        isMobile = TRUE;
-        isDesktop = FALSE;
+        isMobile = true;
+        isDesktop = false;
     } else {
-        isMobile = FALSE;
-        isDesktop = TRUE;
+        isMobile = false;
+        isDesktop = true;
     }
     /**
      * To set up a watcher

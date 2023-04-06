@@ -2,17 +2,24 @@ import { Inertia } from "@inertiajs/inertia";
 import { getErrorString } from "@task-shared/helpers";
 
 window._ = {
+    debounce: require('lodash/debounce'),
+    filter: require('lodash/filter'),
+    isString: require('lodash/isString'),
+    map: require('lodash/map'),
+    reduce: require('lodash/reduce'),
     split: require('lodash/split'),
+    size: require('lodash/size'),
+    toLower: require('lodash/toLower'),
 }
 
 window.swl = require('sweetalert2')
 
 window.Toast = swl.mixin({
-    toast: TRUE,
+    toast: true,
     position: 'top-end',
-    showConfirmButton: FALSE,
-  showCloseButton:TRUE,
-  allowEscapeKey:TRUE,
+    showConfirmButton: false,
+  showCloseButton:true,
+  allowEscapeKey:true,
     timer: 2000,
     icon: "success",
   didOpen: (toast) => {
@@ -26,9 +33,9 @@ window.ToastLarge = swl.mixin({
     title: 'To be implemented!',
     html: 'I will close in <b></b> milliseconds.',
     timer: 3000,
-  timerProgressBar: TRUE,
-  showConfirmButton: FALSE,
-  allowEscapeKey:TRUE,
+  timerProgressBar: true,
+  showConfirmButton: false,
+  allowEscapeKey:true,
     willOpen: () => {
     swl.showLoading()
     },
@@ -44,26 +51,26 @@ window.BlockToast = swl.mixin({
   willOpen: () => {
     swl.showLoading()
     },
-  showConfirmButton: FALSE,
-    showCloseButton: FALSE,
-    allowOutsideClick: FALSE,
-    allowEscapeKey: FALSE
+  showConfirmButton: false,
+    showCloseButton: false,
+    allowOutsideClick: false,
+    allowEscapeKey: false
 });
 
 window.swlPreconfirm = swl.mixin({
     title: 'Are you sure?',
     text: "Implement this when you call the mixin",
     icon: 'question',
-    showCloseButton: FALSE,
-  backdrop:TRUE,
+    showCloseButton: false,
+  backdrop:true,
     allowOutsideClick: () => !swl.isLoading(),
-    allowEscapeKey: FALSE,
-    showCancelButton: TRUE,
-    focusCancel: TRUE,
+    allowEscapeKey: false,
+    showCancelButton: true,
+    focusCancel: true,
     cancelButtonColor: '#d33',
     confirmButtonColor: '#3085d6',
     confirmButtonText: 'To be implemented',
-    showLoaderOnConfirm: TRUE,
+    showLoaderOnConfirm: true,
     preConfirm: () => {
     /** Implement this when you call the mixin */
     },
@@ -82,7 +89,7 @@ Inertia.on('success', ( e ) => {
       html: e.detail.page.props.flash.success,
       icon: "success",
       timer: 3000,
-      allowEscapeKey: TRUE
+      allowEscapeKey: true
     });
   } else if ( e.detail.page.props.flash.warning ) {
     ToastLarge.fire({
@@ -90,7 +97,7 @@ Inertia.on('success', ( e ) => {
       html: e.detail.page.props.flash.warning,
       icon: "warning",
       timer: 5000,
-      allowEscapeKey: TRUE
+      allowEscapeKey: true
     });
   } else {
     swl.close();
@@ -109,7 +116,7 @@ Inertia.on('error', (e) => {
     icon: "error",
     timer:10000, //milliseconds
     footer:
-        `Our support email: & nbsp; & nbsp; & nbsp; < a target = "_blank" rel = "noopener noreferrer" href = "mailto:contact@enski.net" > contact@enski.net < / a > `,
+        `Our support email: & nbsp; & nbsp; & nbsp; <a a target = "_blank" rel = "noopener noreferrer" href = "mailto:support@example.com" > support@example.com </a> `,
   });
 })
 

@@ -58,23 +58,23 @@
 
 --------------------------------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,400&display=swap');
-// $body-font: "Livvic", sans-serif;
-// $title-font: "Livvic", sans-serif;
-// $transition: all 0.3s ease;
-// $primary-color: #106eea;
-// $secondary-color: #03228f;
-// $blue-color: #0073ff;
-// $blue-color2: #1273eb;
-// $purple-color: #7e06e4;
-// $orange-color: #f2541b;
-// $orange-color2: #ff7045;
-// $orange-color-dark: #ff571c;
-// $title-color: #101010;
-// $title-color2: #0a0a0a;
-// $title-color3: #102b3e;
-// $white-color: #ffffff;
-// $body-color: #454545;
-// $body-color2: #363636;
+$body-font: "Livvic", sans-serif;
+$title-font: "Livvic", sans-serif;
+$transition: all 0.3s ease;
+$primary-color: #106eea;
+$secondary-color: #03228f;
+$blue-color: #076aab;
+$blue-color2: #1273eb;
+$purple-color: #7e06e4;
+$orange-color: #f2541b;
+$orange-color2: #ff7045;
+$orange-color-dark: #ff571c;
+$title-color: #101010;
+$title-color2: #0a0a0a;
+$title-color3: #102b3e;
+$white-color: #ffffff;
+$body-color: #454545;
+$body-color2: #363636;
 
 /* -----------------------------------
     01. General CSS
@@ -144,7 +144,7 @@ h6 {
 }
 
 .offwrap {
-  cursor: url("/assets/inertiajs/img/close.png"), auto;
+  cursor: url("/assets/img/close.png"), auto;
   width: 100%;
   left: 100%;
   transition: all 0.8s ease-out 0s;
@@ -272,14 +272,14 @@ ul {
 }
 
 .bg1 {
-  background: url("/assets/inertiajs/img/bg/testimonial-bg.png");
+  background: url("/assets/img/bg/testimonial-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-color: #000060;
 }
 .bg2 {
-  background: url("/assets/inertiajs/img/bg/counter-bg.png");
+  background: url("/assets/img/bg/counter-bg.png");
   background-color: #fff;
   background-size: cover;
   background-repeat: no-repeat;
@@ -290,7 +290,7 @@ ul {
   z-index: 10;
 }
 .bg3 {
-  background: url("/assets/inertiajs/img/bg/process-bg.jpg");
+  background: url("/assets/img/bg/process-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -301,39 +301,39 @@ ul {
   border-radius: 10px 10px 10px 10px;
 }
 .bg4 {
-  background: url("/assets/inertiajs/img/bg/about-2.jpg");
+  background: url("/assets/img/bg/about-2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 .bg5 {
-  background: url("/assets/inertiajs/img/bg/project-bg.png");
+  background: url("/assets/img/bg/project-bg.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-color: #000060;
 }
 .bg6 {
-  background: url("/assets/inertiajs/img/bg/project-bg.png");
+  background: url("/assets/img/bg/project-bg.png");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
   background-color: #000060;
 }
 .bg7 {
-  background: url("/assets/inertiajs/img/bg/cta-bg.jpg");
+  background: url("/assets/img/bg/cta-bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .bg8 {
-  background: url("/assets/inertiajs/img/bg/call-action.jpg");
+  background: url("/assets/img/bg/call-action.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .bg9 {
-  background: url("/assets/inertiajs/img/bg/work-bg.png");
+  background: url("/assets/img/bg/work-bg.png");
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
@@ -341,7 +341,7 @@ ul {
   border-radius: 10px 10px 10px 10px;
 }
 .bg10 {
-  background: url("/assets/inertiajs/img/bg/testi-home7.jpg");
+  background: url("/assets/img/bg/testi-home7.jpg");
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
@@ -349,14 +349,14 @@ ul {
   border-radius: 5px 5px 5px 5px;
 }
 .bg11 {
-  background: url("/assets/inertiajs/img/bg/index-bg.jpg");
+  background: url("/assets/img/bg/index-bg.jpg");
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
   background-color: #0c54b8;
 }
 .bg12 {
-  background: url("/assets/inertiajs/img/bg/case-study.jpg");
+  background: url("/assets/img/bg/case-study.jpg");
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
@@ -366,117 +366,117 @@ ul {
   }
 }
 .bg13 {
-  background: url("/assets/inertiajs/img/bg/services-bg.jpg");
+  background: url("/assets/img/bg/services-bg.jpg");
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
 }
 .bg14 {
-  background: url("/assets/inertiajs/img/bg/choose-bg.jpg");
+  background: url("/assets/img/bg/choose-bg.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 }
 .bg15 {
-  background: url("/assets/inertiajs/img/bg/steps-area.png");
+  background: url("/assets/img/bg/steps-area.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   background-color: #f3f7ff;
 }
 .bg16 {
-  background: url("/assets/inertiajs/img/bg/tech-bg.png");
+  background: url("/assets/img/bg/tech-bg.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   background-color: #020e38;
 }
 .bg17 {
-  background: url("/assets/inertiajs/img/bg/call-to-action2.jpg");
+  background: url("/assets/img/bg/call-to-action2.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 }
 .bg18 {
-  background: url("/assets/inertiajs/img/bg/shape-bg2.png");
+  background: url("/assets/img/bg/shape-bg2.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 .bg19 {
-  background: url("/assets/inertiajs/img/bg/3counter-.jpg");
+  background: url("/assets/img/bg/3counter-.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   padding: 80px 60px 70px 60px;
 }
 .bg20 {
-  background: url("/assets/inertiajs/img/bg/services-bg-shape.png");
+  background: url("/assets/img/bg/services-bg-shape.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .bg21 {
-  background: url("/assets/inertiajs/img/bg/home13/counter-bg.png");
+  background: url("/assets/img/bg/home13/counter-bg.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 }
 .bg22 {
-  background: url("/assets/inertiajs/img/bg/testi12-bg.jpg");
+  background: url("/assets/img/bg/testi12-bg.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 }
 .bg23 {
-  background: url("/assets/inertiajs/img/bg/call-action3.jpg");
+  background: url("/assets/img/bg/call-action3.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 }
 .bg24 {
-  background: url("/assets/inertiajs/img/bg/cta-bg13.jpg");
+  background: url("/assets/img/bg/cta-bg13.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 }
 .bg25 {
-  background: url("/assets/inertiajs/img/bg/skill-bg16.jpg");
+  background: url("/assets/img/bg/skill-bg16.jpg");
   background-position: center left;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .bg26 {
-  background: url("/assets/inertiajs/img/bg/service-bg16.jpg");
+  background: url("/assets/img/bg/service-bg16.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .bg27 {
-  background: url("/assets/inertiajs/img/bg/counter-bg16.jpg");
+  background: url("/assets/img/bg/counter-bg16.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 100px 0px 460px 0px;
 }
 .bg28 {
-  background: url("/assets/inertiajs/img/bg/testi-bg16.jpg");
+  background: url("/assets/img/bg/testi-bg16.jpg");
   background-position: center right;
   background-repeat: no-repeat;
 }
 .bg29 {
-  background: url("/assets/inertiajs/img/bg/cta-bg16.jpg");
+  background: url("/assets/img/bg/cta-bg16.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .bg30 {
-  background: url("/assets/inertiajs/img/bg/counter-bg16.jpg");
+  background: url("/assets/img/bg/counter-bg16.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .rs-step {
-  background: url("/assets/inertiajs/img/bg/steps-bg.jpg");
+  background: url("/assets/img/bg/steps-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -565,7 +565,7 @@ ul.rs-features-list {
     i {
       color: #fff;
       background-color: transparent;
-      background-image: linear-gradient(180deg, #dd4c23 0%, #f27c1e 100%);
+      background-image: linear-gradient(180deg, #2371dd 0%, #1eb2f2 100%);
       padding: 10px 10px 10px 10px;
       margin: 0px 20px 0px 0px;
       border-radius: 50px 50px 50px 50px;
@@ -991,10 +991,10 @@ blockquote {
   }
   &.started {
     padding: 14px 40px 14px 40px;
-    background-image: linear-gradient(220deg, #f27c1e 0%, #dd4c23 79%);
+    background-image: linear-gradient(220deg, #1eb2f2 0%, #2371dd 79%);
     border-radius: 30px 30px 30px 30px;
     &:hover {
-      background-image: linear-gradient(180deg, #dd4c23 19%, #f27c1e 100%);
+      background-image: linear-gradient(180deg, #2371dd 19%, #1eb2f2 100%);
       color: $white-color;
     }
     &.get-new {
@@ -1031,11 +1031,11 @@ blockquote {
       }
     }
     &.get-ready5 {
-      background-image: linear-gradient(250deg, #f18e27 19%, #f14d1a 100%);
+      background-image: linear-gradient(250deg, #1eb2f2 19%, #2371dd 100%);
       text-transform: uppercase;
       border-radius: 5px 5px 5px 5px;
       &:hover {
-        background-image: linear-gradient(270deg, #f14d1a 20%, #f18e27 100%);
+        background-image: linear-gradient(270deg, #2371dd 20%, #1eb2f2 100%);
       }
     }
     &.more {
@@ -1165,7 +1165,7 @@ blockquote {
     background: transparent;
     &:hover {
       color: $white-color;
-      background-image: linear-gradient(150deg, #dd4c23 19%, #f27c1e 100%);
+      background-image: linear-gradient(150deg, #2371dd 19%, #1eb2f2 100%);
     }
   }
   &.reply {
@@ -1406,7 +1406,7 @@ blockquote {
     opacity: 0.9;
   }
   &.orange-btn {
-    background-image: linear-gradient(160deg, #f27c1e 0%, #dd4c23 79%);
+    background-image: linear-gradient(160deg, #1eb2f2 0%, #2371dd 79%);
   }
 }
 .submit {
@@ -1904,7 +1904,7 @@ blockquote {
     }
     &.gold-color {
       font-weight: 600;
-      color: #f27c1e;
+      color: #1eb2f2;
     }
     &.contact {
       color: $blue-color2;
@@ -2198,7 +2198,7 @@ blockquote {
       margin: 0 auto;
     }
     span {
-      color: $orange-color2;
+      color: $blue-color;
     }
   }
   .desc {
@@ -2263,7 +2263,7 @@ blockquote {
 }
 .gold-color {
   font-weight: 600;
-  color: #f27c1e !important;
+  color: #1eb2f2 !important;
 }
 .blue-color {
   color: $blue-color !important;
@@ -3388,7 +3388,7 @@ blockquote {
         &.home14-style {
           .expand-btn-inner ul .sidebarmenu-search > a:hover,
           .menu-area .row-table .main-menu .rs-menu ul.nav-menu li a:hover {
-            color: $orange-color2;
+            color: $blue-color;
           }
           .menu-area
             .main-menu
@@ -3398,13 +3398,13 @@ blockquote {
             .single-megamenu:hover
             .sub-menu
             .menu-title {
-            color: $orange-color2;
+            color: $blue-color;
           }
           .menu-area .row-table .main-menu .rs-menu ul.sub-menu li.active > a {
-            color: $orange-color2 !important;
+            color: $blue-color !important;
           }
           .menu-area .row-table .main-menu .rs-menu ul.nav-menu li.current-menu-item > a {
-            color: $orange-color2;
+            color: $blue-color;
             line-height: 100px;
             height: 100px;
           }
@@ -3419,14 +3419,14 @@ blockquote {
                   .sidebarmenu-search {
                     > a {
                       &:hover {
-                        color: $orange-color2;
+                        color: $blue-color;
                       }
                     }
                   }
                   li {
                     .humburger {
                       span {
-                        background: $orange-color2;
+                        background: $blue-color;
                         &.dot2,
                         &.dot4,
                         &.dot6,
@@ -3452,7 +3452,7 @@ blockquote {
                     &.dot4,
                     &.dot6,
                     &.dot8 {
-                      background: $orange-color2;
+                      background: $blue-color;
                     }
                   }
                 }
@@ -3628,7 +3628,7 @@ blockquote {
             .quote-btn {
               a {
                 font-size: 14px;
-                background-image: linear-gradient(150deg, #dd4c23 19%, #f27c1e 100%);
+                background-image: linear-gradient(150deg, #2371dd 19%, #1eb2f2 100%);
                 padding: 16px 26px;
                 border-radius: 3px;
                 color: #fff;
@@ -3807,10 +3807,10 @@ blockquote {
     }
     &.home14-style-togle {
       .canvas-contact .address-area .address-list .info-content em a:hover {
-        color: $orange-color2;
+        color: $blue-color;
       }
       .canvas-contact .social li a i {
-        background: $orange-color2;
+        background: $blue-color;
       }
     }
   }
@@ -4095,7 +4095,7 @@ body {
 ---------------------------------------*/
 .rs-banner {
   &.main-home {
-    background: url("/assets/inertiajs/img/banner/banner-1.jpg");
+    background: url("/assets/img/banner/banner-1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 765px;
@@ -4123,7 +4123,7 @@ body {
     }
   }
   &.style2 {
-    background: url("/assets/inertiajs/img/banner/banner-2.jpg");
+    background: url("/assets/img/banner/banner-2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left top;
@@ -4268,7 +4268,7 @@ body {
     }
   }
   &.style4 {
-    background: url("/assets/inertiajs/img/banner/banner-6.jpg");
+    background: url("/assets/img/banner/banner-6.jpg");
     background-size: cover;
     background-position: top right;
     background-repeat: no-repeat;
@@ -4315,7 +4315,7 @@ body {
     }
   }
   &.style5 {
-    background: url("/assets/inertiajs/img/banner/style2/banner-9.jpg");
+    background: url("/assets/img/banner/style2/banner-9.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -4410,7 +4410,7 @@ body {
     }
   }
   &.style7 {
-    background: url("/assets/inertiajs/img/banner/style3/home-11.jpg");
+    background: url("/assets/img/banner/style3/home-11.jpg");
     background-color: #03228f;
     background-repeat: no-repeat;
     background-size: cover;
@@ -4442,7 +4442,7 @@ body {
     }
   }
   &.style8 {
-    background: url("/assets/inertiajs/img/banner/home-12.jpg");
+    background: url("/assets/img/banner/home-12.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -4480,7 +4480,7 @@ body {
     }
   }
   &.style9 {
-    background: url("/assets/inertiajs/img/banner/style4/banner-bg.png");
+    background: url("/assets/img/banner/style4/banner-bg.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -4552,7 +4552,7 @@ body {
     }
   }
   &.style10 {
-    background-image: url("/assets/inertiajs/img/banner/banner14.jpg");
+    background-image: url("/assets/img/banner/banner14.jpg");
     background-repeat: no-repeat;
     .banner-content {
       padding: 305px 0 350px;
@@ -4574,7 +4574,7 @@ body {
         max-width: 820px;
         margin: 0 auto 48px;
         span {
-          color: $orange-color2;
+          color: $blue-color;
         }
       }
       .banner-btn li {
@@ -4635,17 +4635,17 @@ body {
     }
   }
   &.img1 {
-    background: url("/assets/inertiajs/img/breadcrumbs/1.jpg");
+    background: url("/assets/img/breadcrumbs/1.jpg");
     background-position: center top;
   }
   &.img2 {
-    background: url("/assets/inertiajs/img/breadcrumbs/2.jpg");
+    background: url("/assets/img/breadcrumbs/2.jpg");
   }
   &.img3 {
-    background: url("/assets/inertiajs/img/breadcrumbs/3.jpg");
+    background: url("/assets/img/breadcrumbs/3.jpg");
   }
   &.img4 {
-    background: url("/assets/inertiajs/img/breadcrumbs/4.jpg");
+    background: url("/assets/img/breadcrumbs/4.jpg");
   }
 }
 
@@ -4687,14 +4687,14 @@ body {
         }
       }
       &.slide1 {
-        background: url("/assets/inertiajs/img/slider/slider-1-1.jpg");
+        background: url("/assets/img/slider/slider-1-1.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         padding: 260px 0 270px;
       }
       &.slide2 {
-        background: url("/assets/inertiajs/img/slider/slider-2.jpg");
+        background: url("/assets/img/slider/slider-2.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -4789,13 +4789,13 @@ body {
         margin-bottom: 20px;
       }
       &.slide1 {
-        background: url("/assets/inertiajs/img/slider/style2/2.jpg");
+        background: url("/assets/img/slider/style2/2.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
       }
       &.slide2 {
-        background: url("/assets/inertiajs/img/slider/style2/1.jpg");
+        background: url("/assets/img/slider/style2/1.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -4925,7 +4925,7 @@ body {
   z-index: -111;
   .video-item {
     position: relative;
-    background: url("/assets/inertiajs/img/video/video.jpg");
+    background: url("/assets/img/video/video.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
@@ -5208,7 +5208,7 @@ body {
               font-weight: 700;
               padding: 0px 0px 0px 0px;
               &.orange-color {
-                color: #dd4c23;
+                color: #2371dd;
               }
             }
           }
@@ -5381,7 +5381,7 @@ body {
           .count-number {
             margin-bottom: 7px;
             .rs-count {
-              color: $orange-color2;
+              color: $blue-color;
               font-weight: 700;
             }
           }
@@ -5492,7 +5492,7 @@ body {
       }
     }
     &.onepage-box {
-      background-image: linear-gradient(220deg, #f27c1e 0%, #dd4c23 79%);
+      background-image: linear-gradient(220deg, #1eb2f2 0%, #2371dd 79%);
       .address-box {
         .address-icon {
           background: white-color;
@@ -5776,7 +5776,7 @@ body {
           .skillbar {
             border-color: $orange-color-dark;
             .skillbar-bar {
-              background: $orange-color2;
+              background: $blue-color;
             }
             .skill-bar-percent {
               right: 70px;
@@ -6015,14 +6015,14 @@ body {
     16. Team Section CSS
 ---------------------------------------*/
 .rs-team {
-  background: url("/assets/inertiajs/img/bg/team-bg.png");
+  background: url("/assets/img/bg/team-bg.png");
   background-position: center center;
   background-size: cover;
   background-color: #000060;
   .team-item-wrap {
     .team-wrap {
       padding: 9px 35px 25px 20px;
-      background: url("/assets/inertiajs/img/team/ngbng.png");
+      background: url("/assets/img/team/ngbng.png");
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
@@ -6113,7 +6113,7 @@ body {
     margin: -10px;
   }
   &.onepage-team {
-    background: url("/assets/inertiajs/img/bg/team-bg.png");
+    background: url("/assets/img/bg/team-bg.png");
     background-color: #f6f7f9;
     .team-item-wrap {
       .team-content {
@@ -6386,7 +6386,7 @@ body {
             a {
               color: $white-color;
               &:hover {
-                color: $orange-color2;
+                color: $blue-color;
               }
             }
           }
@@ -6416,7 +6416,7 @@ body {
                 font-size: 15px;
                 transition: all 0.8s ease;
                 &:hover {
-                  background: $orange-color2;
+                  background: $blue-color;
                 }
               }
               &:last-child {
@@ -6898,13 +6898,13 @@ body {
               }
 
               &.purple-bg {
-                background: url("/assets/inertiajs/img/services/main-home/icons/bg-box.png");
+                background: url("/assets/img/services/main-home/icons/bg-box.png");
               }
               &.gold-bg {
-                background: url("/assets/inertiajs/img/services/main-home/icons/bg-box-2.png");
+                background: url("/assets/img/services/main-home/icons/bg-box-2.png");
               }
               &.blue-bg {
-                background: url("/assets/inertiajs/img/services/main-home/icons/bg-box-3.png");
+                background: url("/assets/img/services/main-home/icons/bg-box-3.png");
               }
               &.purple-bg,
               &.gold-bg,
@@ -7509,7 +7509,7 @@ body {
               a {
                 color: $white-color;
                 &:hover {
-                  color: $orange-color2;
+                  color: $blue-color;
                 }
               }
             }
@@ -7532,7 +7532,7 @@ body {
 }
 .rs-services-single {
   .services-add {
-    background: url("/assets/inertiajs/img/services/single/contact-phone.jpg");
+    background: url("/assets/img/services/single/contact-phone.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -10180,7 +10180,7 @@ body {
   }
   &.style3 {
     background-image: unset;
-    background: url("/assets/inertiajs/img/bg/partners-bg.jpg");
+    background: url("/assets/img/bg/partners-bg.jpg");
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
@@ -10703,7 +10703,7 @@ body {
     }
   }
   &.style7 {
-    background: url("/assets/inertiajs/img/bg/testimonial-bg.png");
+    background: url("/assets/img/bg/testimonial-bg.png");
     background-position: bottom center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -11668,7 +11668,7 @@ body {
     35. Footer Section CSS
 ------------------------------------*/
 .rs-footer {
-  background: url("/assets/inertiajs/img/bg/footer-bg.png");
+  background: url("/assets/img/bg/footer-bg.png");
   background-color: #f5f6f9;
   background-size: cover;
   background-repeat: no-repeat;
@@ -11897,7 +11897,7 @@ body {
       }
       p {
         input[type="submit"] {
-          background-image: linear-gradient(180deg, #dd4c23 19%, #f27c1e 100%);
+          background-image: linear-gradient(180deg, #2371dd 19%, #1eb2f2 100%);
         }
       }
     }
@@ -11929,17 +11929,17 @@ body {
       .footer-top .address-widget li .desc a:hover,
       .footer-top .address-widget li i,
       .footer-top .site-map li a:hover {
-        color: $orange-color2;
+        color: $blue-color;
       }
       .footer-top p input[type="submit"],
       .footer-bottom .copy-right-menu li:before,
       .footer-top .footer-social li a:hover {
-        background: $orange-color2;
+        background: $blue-color;
       }
     }
   }
   &.style2 {
-    background: url("/assets/inertiajs/img/bg/footer-bg2.jpg");
+    background: url("/assets/img/bg/footer-bg2.jpg");
     background-color: #f5f6f9;
     background-size: cover;
     background-repeat: no-repeat;
@@ -12166,7 +12166,7 @@ body {
       }
     }
     &.onepage-style4 {
-      background: url("/assets/inertiajs/img/bg/footer-bg.png");
+      background: url("/assets/img/bg/footer-bg.png");
       background-color: #f5f6f9;
       background-size: cover;
       background-repeat: no-repeat;
@@ -12179,7 +12179,7 @@ body {
     36. Error Page CSS
 --------------------------*/
 .page-error {
-  background: url("/assets/inertiajs/img/bg/error.jpg");
+  background: url("/assets/img/bg/error.jpg");
   background-repeat: no-repeat !important;
   background-size: cover !important;
   position: relative;
@@ -12251,12 +12251,12 @@ body {
   }
   &.oranage {
     i {
-      background-image: linear-gradient(180deg, #dd4c23 19%, #f27c1e 100%);
+      background-image: linear-gradient(180deg, #2371dd 19%, #1eb2f2 100%);
     }
   }
   &.oranage2 {
     i {
-      background: $orange-color2;
+      background: $blue-color;
     }
   }
   &.purple-color {
@@ -12291,7 +12291,7 @@ body {
   }
   &.orange-loader {
     .loader-container {
-      background: $orange-color2;
+      background: $blue-color;
     }
   }
 }
@@ -12482,7 +12482,7 @@ body {
       .line {
         background: rgba(255, 255, 255, 0.1);
         &:after {
-          background-image: linear-gradient(220deg, #f27c1e 0%, #dd4c23 79%);
+          background-image: linear-gradient(220deg, #1eb2f2 0%, #2371dd 79%);
         }
       }
     }

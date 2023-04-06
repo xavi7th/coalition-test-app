@@ -14,7 +14,8 @@ class TaskFactory extends Factory
   {
     return [
       'name' => $this->faker->sentence(),
-      'course_category_id' => Project::factory()->create(),
+      'project_id' => Project::inRandomOrder()->first() ?? Project::factory()->create(),
+      'priority' => $this->faker->randomDigitNotZero()
     ];
   }
 }
