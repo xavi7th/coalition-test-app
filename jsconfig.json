@@ -1,0 +1,17 @@
+{
+	"compilerOptions": {
+		"target": "es2017",
+		"allowSyntheticDefaultImports": true,
+		"baseUrl": "./",
+		"paths": {
+			"@assets/*": ["resources/*"],
+
+      "@task-pages/*": ["app/Modules/ELearning/Resources/js/Pages/*"],
+      "@task-partials/*": ["app/Modules/ELearning/Resources/js/Pages/Partials/*"],
+			"@task-shared/*": ["app/Modules/ELearning/Resources/js/Shared/*"],
+			"@task-components/*": ["app/Modules/ELearning/Resources/js/Components/*"],
+			"@task-assets/*": ["app/Modules/ELearning/Resources/*"],
+		}
+	},
+	"include": ["app", "config/", "database/", "resources/", "routes/"]
+}

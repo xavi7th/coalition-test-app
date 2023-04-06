@@ -1,0 +1,35 @@
+// Typography
+$font-family-sans-serif: 'Nunito', sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+
+$body-font: "Livvic", sans-serif;
+$title-font: "Livvic", sans-serif;
+$transition: all 0.3s ease;
+$primary-color: #106eea;
+$secondary-color: #03228f;
+$blue-color: #0073ff;
+$blue-color2: #1273eb;
+$purple-color: #7e06e4;
+$orange-color: #f2541b;
+$orange-color2: #ff7045;
+$orange-color-dark: #ff571c;
+$title-color: #101010;
+$title-color2: #0a0a0a;
+$title-color3: #102b3e;
+$white-color: #ffffff;
+$body-color: #454545;
+$body-color2: #363636;
+
+
+:root {
+  --brand: #106eea;
+  --secondary: #03228f;;
+  --orange: #f2541b;
+}
+
+.swal2 .sample-btn{
+  outline: var(--brand);
+  border-color: var(--orange);
+  color: var(--secondary);
+}
